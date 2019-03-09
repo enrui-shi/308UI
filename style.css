@@ -1,3 +1,29 @@
+body{
+    margin: 0px;
+   }
+
+.button {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  width: 250px;
+}
+
+.button:hover {
+  background-color: #555555;
+  color: white;
+}
+
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
 
 .topnav {
     overflow: hidden;
@@ -32,25 +58,29 @@
     height:48px;
 }
 
-.map-content {
-    float:left;
-}
-  .map-picture {
-    /* The map position */
-    background-image: url("image/map.jpg");
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-size: cover;
-  
-    /* Needed to position the search bar */
-    position: relative;
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  /* Position the search bar container inside the image */
+#map {
+    height: 100%;
+}
+.map-content {
+    float:left;
+    width:95%;
+    height:50%;
+    margin: 5px;
+}
+  
+
+  /* Position the search bar container inside the image
   .map-container {
     position: absolute;
     margin: 20px;
     width: auto;
-  }
+  } */
 
   

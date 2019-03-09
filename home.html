@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Main Page</title>
   </head>
   <body>
@@ -12,15 +12,40 @@
       <a href="#report">Report</a>
       <a href="#theme">Theme</a>
       <a href="#about">About</a>
-      <input type="image" class="user-icon" src="image/user_icon.jpg" />
+      <input type="image" class="user-icon" onclick="document.getElementById('user01').style.display='block'" src="image/user_icon.jpg" />
     </div>
-    <div class="map-content">
-      <div class="map-picture">
-        <div class="map-container">
-          <img src="image/map.jpg">
-        </div>
+
+    <div id="user01" class="modal">
+      <div class="w3-modal-content w3-animate-zoom "><br>
+      <div class="w3-center">
+        <span onclick="document.getElementById('user01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+        <p><button class="button" type="submit">Change Password</button></p> 
+        <p><button class="button" type="submit">Logout</button></p> 
+      </div>
       </div>
     </div>
+
+    <div class="map-content">
+      <div class="map-picture">
+        <!--<div class="map-container">-->
+          <!--<img src="image/map.png" style="width:100%;height:100%;">-->
+          <div id="map"></div>
+        <!--</div>-->
+      </div>
+    </div>
+
+    <script>
+    var map;
+    function initMap() {
+        index = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+        });
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTq-RbOh12358WtdNQw_W6X_2cpQ--jfU&callback=initMap"
+        async defer>
+    </script>
   </body>
 
  </html> 
