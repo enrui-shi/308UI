@@ -1,20 +1,56 @@
-navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+
+.topnav {
     overflow: hidden;
     background-color: #333;
-}
-
-navbarli {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .topnav a {
     float: left;
-    display: block;
-    color: white;
+    color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a:hover {
+    background-color: #7d7d7d;
+  }
+
+  .topnav a.active {
+    background-color:#70587c;
+    color: white;
+  }
+
+  .user-icon{
+    float:right;
+    cursor:pointer;
+    border:none;
+    width:48px;
+    height:48px;
 }
 
-navbarli:hover {
-    background-color: #111;
+.map-content {
+    float:left;
 }
+  .map-picture {
+    /* The map position */
+    background-image: url("image/map.jpg");
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-size: cover;
+  
+    /* Needed to position the search bar */
+    position: relative;
+  }
+
+  /* Position the search bar container inside the image */
+  .map-container {
+    position: absolute;
+    margin: 20px;
+    width: auto;
+  }
+
+  
