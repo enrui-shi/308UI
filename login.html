@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+            <button class = "login_button" onclick = openForm()>Login</button>
+        </div>
+
+
+        <div class = "login" id = "myForm"> 
+            <form action>
+                ID:<br>
+                <input type = "text" name = "ID"><br>
+                Password:<br>
+                <input type = "password" name = "pwd"><br>
+            </form>
+            <button onclick="window.location.href='./main.html'">Login </button>
+        </div>   
+        
+        <script>
+                function openForm() {
+                    if(document.getElementById("myForm").style.display == "none"){
+                        document.getElementById("myForm").style.display = "block";
+                    }else{
+                        document.getElementById("myForm").style.display = "none";
+                    }
+                 
+                }
+                
+            
+                </script>
+        
+
+    </body>
+</html>
