@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,10 +13,13 @@
   <body>
   <script>
         function openSidebar() {
+            document.getElementById("main").style.marginRight = "30%";
+            document.getElementById("sidebar").style.width = "30%";
             document.getElementById("sidebar").style.display = "block";
             document.getElementById("sidebar").style.animation = "popup 0.5s";
         }
         function closeSidebar() {
+            document.getElementById("main").style.marginRight = "0%";
             document.getElementById("sidebar").style.animation = "popin 0.5s"; 
             document.getElementById("sidebar").style.display = "none"; 
         }
@@ -55,82 +60,80 @@
       </div>
     </div>
 
-    <div class="map-content">
-      <!--<img src="image/map.png" style="width:100%;height:100%;">-->
-      <div id="map"></div>
-    </div>
-    <script>
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-              center: {lat: -34.397, lng: 150.644},
-              zoom: 8
-          });
-        var marker = new google.maps.Marker({position:{lat: -34.397, lng: 150.644}, map: map});
-    }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTq-RbOh12358WtdNQw_W6X_2cpQ--jfU&callback=initMap"async defer>
-    </script>
+    <div id="main">
+      <div class="map-content">
+        <!--<img src="image/map.png" style="width:100%;height:100%;">-->
+        <div id="map"></div>
+      </div>
+      <script>
+        function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 40.73, lng: -73.94},
+                zoom: 8
+            });
+          var marker = new google.maps.Marker({position:{lat: 40.73, lng: -73.94}, map: map});
+      }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTq-RbOh12358WtdNQw_W6X_2cpQ--jfU&callback=initMap"async defer>
+      </script>
 
+    
+      <div class = "my-bar">
+          <button onclick= "openSidebar();" ><i class="fa fa-bars"></i> Menu</button>
+      </div>
 
-    <div class = "my-bar">
-        <button onclick= "openSidebar();" ><i class="fa fa-bars"></i> Menu</button>
-    </div>
-
-     <div id = "sidebar">
-        <button onclick = "closeSidebar();"><i class="fa fa-close"></i></button>
-        <div class="my-slidebar-box">
-            <b>
-                0
-                <input type="range" min="0" max="100" value="0" class="my-slider" id="efficiencyGap"
-                    onchange="updateTextInput(this.value,this.id);">
-                1 
-                <label id="efficiencyGapValue"> 0.00</label><br>
-                0
-                <input type="range" min="0" max="100" value="0" class="my-slider" id="compactness"
-                    onchange="updateTextInput(this.value,this.id);">
-                1 <label id="compactnessValue"> 0.00</label> <br>
-    
-                0
-                <input type="range" min="0" max="100" value="0" class="my-slider" id="partisanFairness"
-                    onchange="updateTextInput(this.value,this.id);">
-                1 
-                <label id="partisanFairnessValue"> 0.00</label><br>
-    
-                0
-                <input type="range" min="0" max="100" value="0" class="my-slider" id="equalPopulation"
-                    onchange="updateTextInput(this.value,this.id);">
-                1 
-                <label id="equalPopulationValue"> 0.00</label><br>
-    
-                0
-                <input type="range" min="0" max="100" value="0" class="my-slider" id="naturalContraint"
-                    onchange="updateTextInput(this.value,this.id);">
-                1 
-                <label id="naturalContraintValue"> 0.00</label>
-            </b>
-            <a>
-                &emsp;efficiency gap<br>
-                &emsp;compactness<br>
-                &emsp;partisan fairness<br>
-                &emsp;equal population<br>
-                &emsp;natural contraint<br>
-            </a>
-        </div>
-        <div class="my-numberInput">
-            <form>
-                number of majority-minority district <input type="number" id="majority-minority"> <br>
-                min threshold（%） <input type="number" id="minThreshold"><br>
-                max threshold（%） <input type="number" id="maxThreshold"><br>
-                racial group  <input type="number" id="racial-group"><br>
-                ethnic group <input type="number" id="ethnic-group"><br>
-            </form>
-        </div>
-    </div>
+      <div id = "sidebar">
+          <button onclick = "closeSidebar();"><i class="fa fa-close"></i></button>
+          <div class="my-slidebar-box">
+              <b>
+                  0
+                  <input type="range" min="0" max="100" value="0" class="my-slider" id="efficiencyGap"
+                      onchange="updateTextInput(this.value,this.id);">
+                  1 
+                  <label id="efficiencyGapValue"> 0.00</label><br>
+                  0
+                  <input type="range" min="0" max="100" value="0" class="my-slider" id="compactness"
+                      onchange="updateTextInput(this.value,this.id);">
+                  1 <label id="compactnessValue"> 0.00</label> <br>
+      
+                  0
+                  <input type="range" min="0" max="100" value="0" class="my-slider" id="partisanFairness"
+                      onchange="updateTextInput(this.value,this.id);">
+                  1 
+                  <label id="partisanFairnessValue"> 0.00</label><br>
+      
+                  0
+                  <input type="range" min="0" max="100" value="0" class="my-slider" id="equalPopulation"
+                      onchange="updateTextInput(this.value,this.id);">
+                  1 
+                  <label id="equalPopulationValue"> 0.00</label><br>
+      
+                  0
+                  <input type="range" min="0" max="100" value="0" class="my-slider" id="naturalContraint"
+                      onchange="updateTextInput(this.value,this.id);">
+                  1 
+                  <label id="naturalContraintValue"> 0.00</label>
+              </b>
+              <a>
+                  &emsp;efficiency gap<br>
+                  &emsp;compactness<br>
+                  &emsp;partisan fairness<br>
+                  &emsp;equal population<br>
+                  &emsp;natural contraint<br>
+              </a>
+          </div>
+          <div class="my-numberInput">
+              <form>
+                  number of majority-minority district <input type="number" id="majority-minority"> <br><p></p>
+                  min threshold（%） <input type="number" id="minThreshold"><br><p></p>
+                  max threshold（%） <input type="number" id="maxThreshold"><br><p></p>
+                  racial group  <input type="number" id="racial-group"><br><p></p>
+                  ethnic group <input type="number" id="ethnic-group"><br><p></p>
+              </form>
+          </div>
+      </div>
+  </div>
     </body>
 
-    <footer class="page-footer font-small" style="background-color:#333; color:white;">
-      <div class="footer-copyright text-center py-3"> © 2019 Copyright: Pirates
-      </div>
-  </footer>  
 
  </html> 
