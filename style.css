@@ -166,6 +166,44 @@ html {
   z-index:10;
   animation: none;
 }
+
+.setting{
+  position:fixed;
+  margin-top: 3px;
+  z-index:12;
+  width:200px;
+  height: 160px;
+  border-style: solid; 
+  border-width: 1.5px;
+  display: none;
+  border-radius: 5px;
+  background-color:white;
+}
+.setting button{
+  height: 30px;
+  width: 180px;
+  margin:10px;
+  border-radius:5px;
+  border-style: solid;
+  border-width: 1px; 
+  border-color: black;
+}
+.setting button:hover{
+  background-color: lightgray;
+}
+.setting .arrow-up{
+  position: relative;
+  top:-6px;
+  left:53px;
+  width: 10px;
+  height: 10px;
+  border-left:solid;
+  border-top:solid;
+  border-width: 1.5px;
+  background-color: white;
+  transform:rotate(45deg)
+}
+
 @keyframes popup {
   0%{
     right:-350px;
@@ -184,7 +222,7 @@ html {
   }
 }
 
-#sidebar button{
+#sidebar button.icon{
   background-color:white;
   position:relative;
   top:1px;
@@ -194,7 +232,7 @@ html {
   font-size: 16px;
   cursor: pointer;
 }
-#sidebar button:hover{
+#sidebar button.icon:hover{
 color: gray;
 }
 .my-bar{
@@ -220,7 +258,7 @@ color: gray;
   overflow: scroll;
   border-style:solid;
   border-width: 1px;
-  font-size:85%;
+  font-size:100%;
 } 
 .my-slidebar-box label{
   margin-left:20px;

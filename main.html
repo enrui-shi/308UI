@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <title>Main Page</title>
   </head>
 
-
   <body>
   <script>
         function openSidebar() {
@@ -29,7 +28,14 @@
             else if (val % 10 == 0) {
                 document.getElementById(id + "Value").innerHTML = val / 100 + "0";
             }
-        }                      
+        }    
+        function sideSetting(){
+            if(document.getElementById("setting").style.display == "block"){
+                document.getElementById("setting").style.display = "none";
+            }else{
+                document.getElementById("setting").style.display = "block";
+            }
+        }                  
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -77,7 +83,14 @@
     </div>
 
      <div id = "sidebar">
-        <button onclick = "closeSidebar();"><i class="fa fa-close"></i></button>
+        <button onclick = "closeSidebar();" class = "icon"><i class="fa fa-close"></i></button>
+        <button onclick="sideSetting();" class = "icon"><i class = "fa fa-cog"></i></button>
+        <div class = "setting" id = "setting">
+            <div class="arrow-up"></div>
+            <button>Load Saved Setting</button><br>
+            <button>Save Current Setting</button><br>
+            <button>Set as default</button>
+        </div>
         <div class="my-slidebar-box">
             <b>
                 0
@@ -118,11 +131,11 @@
         </div>
         <div class="my-numberInput">
             <form>
-                number of majority-minority district <input type="number" id="majority-minority"> <br>
-                min threshold（%） <input type="number" id="minThreshold"><br>
-                max threshold（%） <input type="number" id="maxThreshold"><br>
-                racial group  <input type="number" id="racial-group"><br>
-                ethnic group <input type="number" id="ethnic-group"><br>
+                number of majority-minority district <input type="number" id="majority-minority"> <br><p></p>
+                min threshold（%） <input type="number" id="minThreshold"><br><p></p>
+                max threshold（%） <input type="number" id="maxThreshold"><br><p></p>
+                racial group  <input type="number" id="racial-group"><br><p></p>
+                ethnic group <input type="number" id="ethnic-group"><br><p></p>
             </form>
         </div>
     </div>
@@ -131,6 +144,6 @@
     <footer class="page-footer font-small" style="background-color:#333; color:white;">
       <div class="footer-copyright text-center py-3"> © 2019 Copyright: Pirates
       </div>
-  </footer>  
+    </footer>  
 
  </html> 
