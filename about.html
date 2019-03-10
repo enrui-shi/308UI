@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="topnav">
-        <a onclick="window.location.href='home.html'">Home</a>
+        <a onclick="window.location.href='main.html'">Home</a>
         <a onclick="window.location.href='map.html'">Map</a>
         <a onclick="window.location.href='report.html'">Report</a>
         <a onclick="window.location.href='theme.html'">Theme</a>
@@ -16,10 +16,10 @@
         <input type="image" class="user-icon" onclick="document.getElementById('user01').style.display='block'" src="image/user_icon.jpg" />
         </div>
 
-        <div id="user01" class="modal">
-        <div class="modal-content w3-animate-zoom "><br>
+        <div id="user01" class="my-modal">
+        <div class="my-modal-content w3-animate-zoom "><br>
         <div class="w3-center">
-            <span onclick="document.getElementById('user01').style.display='none'" class="w3-button w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+            <span onclick="document.getElementById('user01').style.display='none'" class="close w3-button w3-small w3-hover-red w3-display-topright" title="Close">&times;</span>
             <p><button class="button" type="submit">Change Password</button></p> 
             <p><button class="button" onclick="window.location.href='login.html'">Logout</button></p> 
         </div>
