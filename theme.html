@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Report Page</title>
+  </head>
+  <body>
+    <div class="topnav">
+        <a onclick="window.location.href='home.html'">Home</a>
+        <a onclick="window.location.href='map.html'">Map</a>
+        <a onclick="window.location.href='report.html'">Report</a>
+        <a class="active" onclick="window.location.href='theme.html'">Theme</a>
+        <a onclick="window.location.href='about.html'">About</a>
+        <input type="image" class="user-icon" onclick="document.getElementById('user01').style.display='block'" src="image/user_icon.jpg" />
+        </div>
+
+        <div id="user01" class="modal">
+        <div class="modal-content w3-animate-zoom "><br>
+        <div class="w3-center">
+            <span onclick="document.getElementById('user01').style.display='none'" class="w3-button w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+            <p><button class="button" type="submit">Change Password</button></p> 
+            <p><button class="button" onclick="window.location.href='login.html'">Logout</button></p> 
+        </div>
+        </div>
+    </div>
+  </body>
+</html> 
