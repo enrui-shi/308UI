@@ -1,19 +1,96 @@
 body{
     background-color:#FBFBFF
  }
- .login {
-     position:absolute;
-     width:150px;
-     height:130px;
-     left:40%;
-     top:40%;
-     margin-left:-50px;
-     margin-top:-50px;
-     border-style: solid;
-     border-color:#7392B7; 
-     border-radius:10px;
-     padding:30px ;
-     background-color:#C5D5EA;
-     display:none
- 
+#sidebar{
+    position:absolute;
+    right:0px;
+    top:15%; 
+    width:350px;
+    height:85%;
+    background-color:#FBFBFF;
+    display:block;
+    border-left:solid;
+    border-top:solid;
+    border-width: 2px;
+    z-index:10;
+}
+#sidebar button{
+    background-color:#FBFBFF;
+    position:relative;
+    top:1px;
+    left:1px;
+    border: none;
+    padding: 10px 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#sidebar button:hover{
+  color: gray;
+}
+.bar{
+    position: absolute;
+    right:10px;
+    top:16%;
+}
+.bar button{
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 12px;
+    cursor: pointer;
+}
+ .slidebar-box{
+    position: relative;;
+    width:92%;
+    height:25%;
+    left:2%;
+    top: 10px;
+    padding:2%;
+    overflow: scroll;
+    border-style:solid;
+    border-width: 1px;
+    font-size:85%;
+ } 
+ .slidebar-box label{
+    margin-left:20px;
+    color:black;
  }
+ .slidebar-box a{
+    position: absolute;
+    font-size:110%;
+    right:5%;
+    top:12%;
+}
+.slidebar-box b{
+    position:absolute;
+    top:10%; 
+    margin-right: 0%;
+    font-size:80%
+}
+.slidebar-box input{
+    width:50%;
+    height:15;
+}
+.numberInput{
+    position: relative;
+    width:92%;
+    height:25%;
+    left:2%;
+    padding:2%;
+    top:10%;
+    border-style:solid;
+    border-width: 1px;
+    overflow: scroll;
+
+}
+
+.numberInput form{
+    font-size:90%;
+}
+.numberInput form input{
+    width: 30px;
+    position: absolute;
+    right:10px
+}
+

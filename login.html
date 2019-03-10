@@ -1,36 +1,89 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div>
-            <button class = "login_button" onclick = openForm()>Login</button>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class = "bar">
+        <button onclick= "openSidebar();" ><i class="fa fa-bars"></i> Menu</button>
+    </div>
+    
+
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").style.display = "block";      
+        }
+        function closeSidebar() {
+            document.getElementById("sidebar").style.display = "none";      
+        }
+
+        function updateTextInput(val, id) {
+            document.getElementById(id + "Value").innerHTML = val / 100;
+            if (val == 100) {
+                document.getElementById(id + "Value").innerHTML = "1.00";
+            }
+            else if (val == 0) {
+                document.getElementById(id + "Value").innerHTML = "0.00";
+            }
+            else if (val % 10 == 0) {
+                document.getElementById(id + "Value").innerHTML = val / 100 + "0";
+            }
+        }                      
+    </script>
+
+    <div id = "sidebar">
+        <button onclick = "closeSidebar();"><i class="fa fa-close"></i></button>
+        <div class="slidebar-box">
+            <b>
+                0
+                <input type="range" min="0" max="100" value="0" class="slider" id="efficiencyGap"
+                    onchange="updateTextInput(this.value,this.id);">
+                1 
+                <label id="efficiencyGapValue"> 0.00</label><br>
+    
+                0
+                <input type="range" min="0" max="100" value="0" class="slider" id="compactness"
+                    onchange="updateTextInput(this.value,this.id);">
+                1 <label id="compactnessValue"> 0.00</label> <br>
+    
+                0
+                <input type="range" min="0" max="100" value="0" class="slider" id="partisanFairness"
+                    onchange="updateTextInput(this.value,this.id);">
+                1 
+                <label id="partisanFairnessValue"> 0.00</label><br>
+    
+                0
+                <input type="range" min="0" max="100" value="0" class="slider" id="equalPopulation"
+                    onchange="updateTextInput(this.value,this.id);">
+                1 
+                <label id="equalPopulationValue"> 0.00</label><br>
+    
+                0
+                <input type="range" min="0" max="100" value="0" class="slider" id="naturalContraint"
+                    onchange="updateTextInput(this.value,this.id);">
+                1 
+                <label id="naturalContraintValue"> 0.00</label>
+            </b>
+            <a>
+                &emsp;efficiency gap<br>
+                &emsp;compactness<br>
+                &emsp;partisan fairness<br>
+                &emsp;equal population<br>
+                &emsp;natural contraint<br>
+            </a>
         </div>
-
-
-        <div class = "login" id = "myForm"> 
-            <form action>
-                ID:<br>
-                <input type = "text" name = "ID"><br>
-                Password:<br>
-                <input type = "password" name = "pwd"><br>
+        <div class="numberInput">
+            <form>
+                number of majority-minority district <input type="number" id="majority-minority"> <br>
+                min threshold（%） <input type="number" id="minThreshold"><br>
+                max threshold（%） <input type="number" id="maxThreshold"><br>
+                racial group  <input type="number" id="racial-group"><br>
+                ethnic group <input type="number" id="ethnic-group"><br>
             </form>
-            <button onclick="window.location.href='./main.html'">Login </button>
-        </div>   
-        
-        <script>
-                function openForm() {
-                    if(document.getElementById("myForm").style.display == "none"){
-                        document.getElementById("myForm").style.display = "block";
-                    }else{
-                        document.getElementById("myForm").style.display = "none";
-                    }
-                 
-                }
-                
-            
-                </script>
-        
+        </div>
+    </div>
 
-    </body>
+</body>
+
 </html>
