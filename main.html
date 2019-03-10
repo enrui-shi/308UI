@@ -34,7 +34,14 @@
             else if (val % 10 == 0) {
                 document.getElementById(id + "Value").innerHTML = val / 100 + "0";
             }
-        }                      
+        }  
+        function sideSetting(){
+            if(document.getElementById("setting").style.display == "block"){
+                document.getElementById("setting").style.display = "none";
+            }else{
+                document.getElementById("setting").style.display = "block";
+            }
+        }                                      
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -78,12 +85,19 @@
       </script>
 
     
-      <div class = "my-bar">
+      <div class="my-menu">
           <button onclick= "openSidebar();" ><i class="fa fa-bars"></i> Menu</button>
       </div>
 
       <div id = "sidebar">
-          <button onclick = "closeSidebar();"><i class="fa fa-close"></i></button>
+        <button onclick = "closeSidebar();" class = "icon"><i class="fa fa-close"></i></button>
+        <button onclick="sideSetting();" class = "icon"><i class = "fa fa-cog"></i></button>
+        <div class = "setting" id = "setting">
+            <div class="arrow-up"></div>
+            <button>Load Saved Setting</button><br>
+            <button>Save Current Setting</button><br>
+            <button>Set as default</button>
+        </div>
           <div class="my-slidebar-box">
               <b>
                   0
@@ -121,6 +135,17 @@
                   &emsp;equal population<br>
                   &emsp;natural contraint<br>
               </a>
+              <div class="my-menu-container">
+              <div class = "my-menu">
+                <button><i class="fa fa-play-circle" style="font-size:36px"></i> Play</button>
+              </div>
+              <div class = "my-menu">
+                <button><i class="fa fa-pause-circle" style="font-size:36px"></i> Pause</button>
+              </div>
+              <div class = "my-menu">
+                <button><i class="fa fa-stop-circle" style="font-size:36px"></i> Stop</button>
+              </div>
+              </div>
           </div>
           <div class="my-numberInput">
               <form>
