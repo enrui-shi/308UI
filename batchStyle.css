@@ -1,0 +1,58 @@
+.range{
+    width:50px
+}
+.textField{
+    display:block;
+    float:left;
+    clear:left;
+    width:250px;
+    text-align: right;
+    line-height: 30px
+}
+b{
+    display: block;
+    float:right;
+    width:200px;
+    line-height: 30px
+}
+form{
+    width:500px;
+    height:350px;
+    position: relative;
+    left:33%;
+    top:10%;
+
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a:hover {
+    background-color: #7d7d7d;
+  }
+
+  .topnav a.active {
+    background-color:#70587c;
+    color: white;
+  }
+  .user-icon{
+    float:right;
+    cursor:pointer;
+    border:none;
+    width:48px;
+    height:48px;
+}

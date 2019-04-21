@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="batchstyle.css">
+
+    <title>
+        BatchRun
+    </title>
+</head>
+
+<body>
+        <div class="topnav">
+                <a onclick="window.location.href='main.html'">Home</a>
+                <a onclick="window.location.href='map.html'">Map</a>
+                <a onclick="window.location.href='report.html'">Report</a>
+                <a class="active" onclick="window.location.href='theme.html'">Theme</a>
+                <a onclick="window.location.href='about.html'">About</a>
+                <input type="image" class="user-icon" onclick="document.getElementById('user01').style.display='block'" src="image/user_icon.jpg" />
+                </div>
+ 
+
+
+    <form>
+            <fieldset>
+                <legend>Batch Run</legend>
+               <label class = "textField"> STATE:</label>
+                    <b>
+                        NY <input type="radio" name="state" value="NY">
+                        NJ <input type="radio" name="state" value="NJ">
+                        OH <input type="radio" name="state" value="OH"><br>
+                    </b>
+               <label class = "textField"> Number of batch:</label>
+               <b> <input type="number" step="1"> <br></b>
+                <label class = "textField">Number of majority minority:</label> 
+                <b>
+                    <input type="number" class="range" name="mmMIN" step="0.01" min = "0" max = "1"> to
+                    <input type="number" class="range" name="mmMAX" step="0.01" min = "0" max = "1"><br>
+                </b>
+                <label class = "textField">Equal Population Weight:</label> 
+                <b>
+                    <input type="number" class="range" name="eqMIN" step="0.01" min = "0" max = "1"> to
+                    <input type="number" class="range" name="eqMAX" step="0.01" min = "0" max = "1"><br>
+                </b>
+                <label class = "textField">Compactness Weight:</label> 
+               <b>
+                    <input type="number" class="range" name="cMIN" step="0.01" min = "0" max = "1"> to
+                    <input type="number" class="range" name="cMAX" step="0.01" min = "0" max = "1"><br>
+               </b>
+                <label class = "textField">Partisan Fairness Weight:</label> 
+                <b>
+                    <input type="number" class="range" name="pfMIN" step="0.01" min = "0" max = "1"> to
+                    <input type="number" class="range" name="pfMAX" step="0.01" min = "0" max = "1"><br>
+                </b>
+                <label class = "textField">Nature Constrain Weight:</label> 
+                <b>
+                    <input type="number" class="range" name="ncMIN"> to
+                    <input type="number" class="range" name="ncMAX"><br>
+                </b>
+                <input type = "submit" value = "submmit" style = "float:right">
+            </fieldset>
+    </form>
+</body>
+
+</html>
