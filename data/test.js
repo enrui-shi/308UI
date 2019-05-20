@@ -1,5 +1,6 @@
 var statesData = {"map":[{
         "type": "Feature",
+        "id": "01",
         "properties": {"party": "Republican"},
         "geometry": {
             "type": "Polygon",
@@ -13,6 +14,7 @@ var statesData = {"map":[{
         }
     }, {
         "type": "Feature",
+        "id": "02",
         "properties": {"party": "Democrat"},
         "geometry": {
             "type": "Polygon",
